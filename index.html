@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Random Number guess, with JS" />
+  <meta name="description" content="Student disscount, with JS" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Adrina peighamabrzadeh" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title> The Random Number guess, with JS</title>
+  <title>Student disscount, with JS</title>
 </head>
 
 <body>
@@ -24,22 +24,35 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Random Number guess, with JS</span>
+        <span class="mdl-layout-title">Student disscount, with JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/dice.gif" alt="temptaure pic, with JS" />
+        <img src="./images/download.jpg" alt="student discount, with JS" />
       </div>
       <br />
-      <div class="page-content">Please enter indgree between 1 to 6:</div>
+      <div class="page-content">Please enter the day and your age:</div>
       <form>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="user-number" />
-          <label class="mdl-textfield__label" for="a-base-of-trapezoid">Number between 1 to 6</label>
+          <input class="mdl-textfield__input" type="number" id="user-age" />
+          <label class="mdl-textfield__label" for="user-age">age...</label>
           <span class="mdl-textfield__error">Input is not a number.</span>
         </div>
-        <br />
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <select class="mdl-textfield__input" id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          <label class="mdl-textfield__label" for="day">day...</label>
+        </div>
+
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="check()" type="button">

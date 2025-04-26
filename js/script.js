@@ -1,27 +1,20 @@
-// Copyright (c) 2025 Adrina peighambarzadeh All rights reserved
+// Copyright (c) 2025 Adrina Peighambarzadeh All rights reserved
 //
-// Created by: Adrina peighambarzadeh
-
+// Created by: Adrina Peighambarzadeh
 // Created on: Apr 2025
 // This file contains the JS functions for index.html
-const randomNumber = Math.floor(Math.random() * 6) + 1
-/*
-* This function calculates the area of a triangle.
-*/
+
 function check() {
   // input
-  const userNumber =  parseInt(document.getElementById("user-number").value)
+  const day = document.getElementById("day").value;
+  const userAge = parseInt(document.getElementById("user-age").value);
 
-  // process
-  if (userNumber == randomNumber) {
-    // output
-  document.getElementById("result").innerHTML =
-    "You have gussed the correct number!"
-}
-
-  if (userNumber != randomNumber) {
-    //output
-    document.getElementById("result"). innerHTML =
-    "You have gussed the wrong number!"
+  // process + output
+  if (day === "Tuesday" || day === "Thursday" || (userAge > 12 && userAge < 21)) {
+    document.getElementById("result").innerHTML =
+      "You get a discount for the museum!";
+  } else {
+    document.getElementById("result").innerHTML =
+      "You must pay the regular price.";
   }
 }
